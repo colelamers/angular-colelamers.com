@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { QuoteInfo, Quotes } from '../objects/quoteInfo';
+import { Quotes } from '../objects/quoteInfo';
 
 @Injectable({
     providedIn: 'root',
@@ -885,9 +885,4 @@ export class SpecialButtonService {
             isSpecial: true
         }
     };
-
-    getSpecialButtonWithQuotes(): Quotes[] {
-        return [this.quotes];
-    }
-
 }

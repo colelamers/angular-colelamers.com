@@ -7,7 +7,7 @@ import { CommonModule, NgClass } from '@angular/common';
 @Component({
   selector: 'app-quote',
   standalone: true,
-  imports: [HomeComponent, CommonModule, NgClass],
+  imports: [CommonModule, NgClass],
   templateUrl: './quote.component.html',
   styleUrl: './quote.component.scss'
 })
@@ -21,7 +21,7 @@ export class QuoteComponent {
       }
     ];
   constructor() {
-    this.quoteData = this.quotesService.getSpecialButtonWithQuotes();
+    this.quoteData = [this.quotesService.quotes];
     this.GetRandomQuote();
   }
   randomQuote!: QuoteInfo;
