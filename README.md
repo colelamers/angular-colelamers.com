@@ -1,2 +1,2 @@
-[Visit my website **http://www.colelamers.com** here!](http://www.colelamers.com)
+[Visit my website http://www.colelamers.com here!](http://www.colelamers.com)
 
