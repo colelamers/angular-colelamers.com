@@ -1,0 +1,174 @@
+/************************ Nodes Global ************************/
+body {
+    background-color: rgb(34, 32, 32);
+    color: rgb(256, 225, 180)
+}
+
+header {
+    margin-top: 20px;
+}
+
+a>button {
+    overflow-wrap: break-word;
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    background-color: black;
+    height: 50px;
+}
+
+div>span {
+    display: block;
+    font-size: 11px;
+}
+
+img~img {
+    margin-left: 20px;
+}
+
+th,
+div>span,
+button {
+    text-align: center;
+}
+
+th {
+    font-size: x-large;
+}
+
+a>button,
+th,
+h5,
+h6 {
+    color: coral;
+}
+
+/* Archive Table Buttons */
+td>a>button {
+    white-space: normal;
+    height: 100%;
+    font-size: 12px;
+}
+
+button>div>img,
+button>img {
+    height: 14px;
+}
+
+
+/************************ Classes ************************/
+
+
+.mainContentSection {
+    margin-top: 5%;
+}
+
+
+.colorPeriwinkle {
+    color: #5688ff;
+}
+
+.fullDivWidth {
+    width: 100%;
+}
+
+.thirtyPercentColumn {
+    width: 30%;
+    text-align: center;
+}
+
+/************************ Rules ************************/
+
+/* Adjusts image sizes for mobile */
+@media (min-width: 200px) {
+    iframe {
+        width: 370px;
+        height: 250px;
+        resize: auto;
+        overflow: auto;
+    }
+
+    img[class=longImg] {
+        width: 100%;
+        /*height: 40%;*/
+    }
+
+    img[class=squareImg] {
+        width: 50%;
+        align-self: stretch;
+    }
+
+    img[class=tallImg] {
+        width: 40%;
+        height: 25%;
+    }
+}
+
+/* Adjusts image sizes for desktop */
+@media (min-width: 800px) {
+    iframe {
+        width: 650px;
+        height: 300px;
+        resize: auto;
+        overflow: auto;
+    }
+
+    /*
+  img[class=longImg] {
+    width: 700px;
+    height: 350px;
+  }
+  */
+
+    img[class=squareImg] {
+        width: 250px;
+        height: 250px;
+    }
+
+    img[class=tallImg] {
+        width: 175px;
+        height: 250px;
+    }
+}
+
+
+/************************ Neat little annoying stuff ************************/
+/****************delete if you want or whatever. just for fun.***************/
+
+.glowButton {
+    content: '';
+    background: linear-gradient(45deg, 
+    #ff0000, #ff7300,
+    #fffb00, #48ff00, 
+    #00ffd5, #002bff, 
+    #7a00ff, #ff00c8, 
+    #ff0000);
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    border-radius: 10px;
+}
+
+.glowButton > span, .glowButton > a > img {
+    color:black;
+    height: 20px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
