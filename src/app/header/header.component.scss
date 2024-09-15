@@ -1,0 +1,10 @@
+:host, header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header > div > a > button {
+    width:10em;
+}

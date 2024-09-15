@@ -973,9 +973,13 @@ export class SpecialButtonService {
                     author: ""
                 },
                 {
-                    quote: "If your God were real, you wouldn't need to convince me. Or do you not see the irony that your God is so powerless, that he needs you to explain to me why I must believe?",
+                    quote: "Do you not see the irony that your God is so powerless, where he needs you to explain to me why I must believe?",
                     author: ""
-                }
+                },
+                {
+                    quote: "Es gibt keinen Gott, und es wird nie einen Gott geben, es sei denn, man betrachtet sich selbst als keinen.",
+                    author: ""
+                },
             ],
         specialButton: {
             include: true,

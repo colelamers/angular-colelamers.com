@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { HomeComponent } from '../home.component';
-import { QuoteInfo, Quotes } from '../../objects/quoteInfo';
-import { SpecialButtonService } from '../../services/specialbutton.service';
+import { QuoteInfo, Quotes } from '../objects/quoteInfo';
+import { SpecialButtonService } from '../services/specialbutton.service';
 import { CommonModule, NgClass } from '@angular/common';
 
 @Component({

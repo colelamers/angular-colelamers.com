@@ -1,5 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
-import { ButtonInfo } from '../../objects/buttoninfo';
+import { ButtonInfo } from '../objects/buttoninfo';
 import { CommonModule, NgClass } from '@angular/common';
 
 @Component({
