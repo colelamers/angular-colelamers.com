@@ -1,2 +1,8 @@
-<p>blog-post works! - {{blogLocation.id}}</p>
-<div><embed src="../../../blogPostData/test.txt"></div>
+<p>{{blogLocation.title}}</p>
+<p>
+    <span>Date:</span>
+    <span>
+        {{this.getDateYYMMDD()}}
+    </span> 
+</p>
+<div [innerHTML]="htmlContent"></div>

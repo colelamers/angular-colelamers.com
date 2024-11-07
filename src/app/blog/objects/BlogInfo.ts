@@ -5,5 +5,5 @@ export interface BlogInfo {
     blogTextPath: string;
     fileName: string;
     //images: string[];
-    //date: Date;
+    date: Date;
 }
