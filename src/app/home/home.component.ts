@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 import { ButtonService } from './services/buttons.service';
 import { ButtonInfo } from './objects/buttoninfo';
-import { ImageComponent } from './image/image.component';
 import { QuoteComponent } from './quote/quote.component';
-import { BlogPostComponent } from "../blog-post/blog-post.component";
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, ImageComponent, QuoteComponent, BlogPostComponent],
+  imports: [CommonModule, ButtonComponent, QuoteComponent],
   templateUrl: './home.component.html',
   styles: []
 })

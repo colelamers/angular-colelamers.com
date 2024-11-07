@@ -28,7 +28,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/styles"
+              "src/styles",
+              "src/blogPostData/"
             ],
             "styles": [
               "src/assets/css/normalize.css",

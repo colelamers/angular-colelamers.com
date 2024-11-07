@@ -14,17 +14,21 @@ import { CommonModule, NgClass } from '@angular/common';
 export class QuoteComponent {
 
   quotesService: SpecialButtonService = inject(SpecialButtonService);
+  randomQuote!: QuoteInfo;
   quoteData: Quotes[] =
     [
       {
         quotesList: []
       }
     ];
+
+  timeLeft: number = 60;
+  
   constructor() {
     this.quoteData = [this.quotesService.quotes];
     this.GetRandomQuote();
+    // todo 1; i'd like a timer job here to change the quote like every ten seconds by just pressing the button. seems like it shouldn't be complicated but apparently it is
   }
-  randomQuote!: QuoteInfo;
 
   /**
   * Makes an HTML node and appends it to the DOM with 
@@ -40,5 +44,4 @@ export class QuoteComponent {
     this.randomQuote = this.randomizeQuote();
     //alert('Test message :' + this.randomQuote.author + ' Count :' + this.randomQuote.quote);
   }
-
 }

@@ -74,7 +74,7 @@ export class SpecialButtonService {
                 },
                 {
                     quote: "He who has done nothing worthy of criticism is of no consequence.",
-                    author: ""
+                    author: "(Similar to the Samuel Johnson Quote: I would rather be attacked than unnoticed. For the worst thing you can do to an author is to be silent as to his works.)"
                 },
                 {
                     quote: "First time home buyers always forget to factor in the cost of owning a home.",
@@ -122,7 +122,7 @@ export class SpecialButtonService {
                 },
                 {
                     quote: "The path to hell is paved with good intentions.",
-                    author: ""
+                    author: "Samuel Johnson"
                 },
                 {
                     quote: "No good deed goes unpunished.",
@@ -549,7 +549,7 @@ export class SpecialButtonService {
                     author: ""
                 },
                 {
-                    quote: "Der Gedanke an den Selbstmord ist ein starkes Trostmittel: mit ihm kommt man gut über manche böse Nacht hinweg.",
+                    quote: "The thought of suicide is a great consolation. By means of it one gets through many a dark night.",
                     author: "Friedrich Nietzsche"
                 },
                 {
@@ -565,7 +565,7 @@ export class SpecialButtonService {
                     author: "Christopher Hitchens"
                 },
                 {
-                    quote: "Sage mir, mit wem Du umgehst, und ich sage Dir, was Du bist.",
+                    quote: "Tell me with whom you interact with and I'll tell you who you are.",
                     author: "Johann Wolfgang von Goethe"
                 },
                 {
@@ -601,7 +601,7 @@ export class SpecialButtonService {
                     author: "Tom Wolfe"
                 },
                 {
-                    quote: "Nothing exists but you. And you are but a thought.",
+                    quote: "There is no God, no universe, no human race, no earthly life, no heaven, no hell. It is all a dream, a grotesque and foolish dream. Nothing exists but you. And you are but a thought -a vagrant thought, a useless thought, a homeless thought, wandering forlorn among the empty eternities!",
                     author: "Mark Twain"
                 },
                 {
@@ -709,7 +709,7 @@ export class SpecialButtonService {
                     author: ""
                 },
                 {
-                    quote: "Bist du ein Gott?",
+                    quote: "Do you believe yourself to be a god?",
                     author: ""
                 },
                 {
@@ -745,7 +745,7 @@ export class SpecialButtonService {
                     author: ""
                 },
                 {
-                    quote: "Das Schicksal mischt die Karten, und wir spielen.",
+                    quote: "Destiny mixes the cards and we play.",
                     author: "Arthur Schopenhauer"
                 },
                 {
@@ -777,7 +777,7 @@ export class SpecialButtonService {
                     author: "Proverbs 16:27; St. Jerome quote \"Engage in some occupation, so that the devil may always find you busy.\""
                 },
                 {
-                    quote: "Wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein.",
+                    quote: "If you stare into the abyss, the abyss will eventually stare into you.",
                     author: "Friedrich Nietzsche"
                 },
                 {
@@ -790,10 +790,10 @@ export class SpecialButtonService {
                 },
                 {
                     quote: "Layoffs are ritual sacrifices to the quarterly gods.",
-                    author: "Inspired by a hackernews comment"
+                    author: ""
                 },
                 {
-                    quote: "Pessimisten sind Optimisten mit mehr Erfahrung.",
+                    quote: "Pessimists are simply optimists but with more experience.",
                     author: ""
                 },
                 {
@@ -830,10 +830,6 @@ export class SpecialButtonService {
                 },
                 {
                     quote: "It is faster to follow the wind than it is to make your own.",
-                    author: ""
-                },
-                {
-                    quote: "Knowledge has a curse, in that it is more prudent to conceal than to reveal.",
                     author: ""
                 },
                 {
@@ -897,7 +893,7 @@ export class SpecialButtonService {
                     author: ""
                 },
                 {
-                    quote: "Your affection to me is an insufferable form of stoicism I sadly must bear.",
+                    quote: "Your affection to me is an insufferable form of confusion to me that do not know how to bear.",
                     author: ""
                 },
                 {
@@ -905,7 +901,7 @@ export class SpecialButtonService {
                     author: ""
                 },
 				{
-					quote: "Heiraten heißt das Mögliche thun, einander zum Ekel zu werden. […] seine Rechte zu halbieren und seine Pflichten zu verdoppeln. […] Heiraten heißt, mit verbundenen Augen in einen Sack greifen und hoffen, dass man einen Aal aus einem Haufen Schlangen herausfinde.",
+                    quote: "To marry is to halve one's rights and double one's duties.",
 					author: "Arthur Schopenhauer"
 				},
 				{
@@ -917,10 +913,6 @@ export class SpecialButtonService {
 					author: ""
 				},
 				{
-					quote: "Zealots are contractors unknowningly underselling their services to someone prudent enough to know how to exploit it.",
-					author: ""
-				},
-				{
 					quote: "All great feats have been completed on upon the backs of cheap labor.",
 					author: ""
 				},
@@ -928,24 +920,8 @@ export class SpecialButtonService {
 					quote: "If the burden and cost of defending ones civil rights befalls upon oneself, one never had those rights to begin with; As rights are what one can do without State inquiry.",
 					author: ""
 				},
-				{
-					quote: "Amerikanner haben keine Kultur, die dorthin geht, irgendwo das Geld ist.",
-					author: ""
-				},
-				{
-					quote: "A prudent man can find that even the most worthless of people have their uses, but, whether that benfits those people, is of an entirely different matter.",
-					author: ""
-				},
-				{
-					quote: "Protest ist, wenn ich sage, das und das paßt mir nicht. Widerstand ist, wenn ich dafür sorge, daß das, was mir nicht paßt, nicht länger geschieht. Protest ist, wenn ich sage, ich mache nicht mehr mit. Widerstand ist, wenn ich dafür sorge, daß alle andern auch nicht mehr mitmachen.",
-					author: "Ulrike Meinhof"
-				},
                 {
-                    quote: "Wenn ich eine Provinz zu bestrafen hätte, ich würde sie von einem Philosophen regieren lassen.",
-                    author: "Friedrich der Große"
-                },
-                {
-                    quote: "Meine Jugend habe ich meinem Vater und meine reifen Jahre dem Staat geopfert; damit glaube ich das Recht erworben zu haben, mit meinem Alter nach Gutdünken zu schalten.",
+                    quote: "After having sacrificed my youth to my father and my maturity to the state, I believe that I have acquired the right to dispose of my old age.",
                     author: "Friedrich der Große, vom Briefe Friedrichs des Großen in Deutscher Übersetzung, Zweiter Band; An D'Argens, 28. Oktober, 1760; https://friedrich.uni-trier.de/de/hein/2/"
                 },
                 {
@@ -969,15 +945,216 @@ export class SpecialButtonService {
                     author: "Omar Khayyam"
                 },
                 {
-                    quote: "For a faith that claims to be self evident, Christians sure do spend a lot of time trying to convince others that it is.",
+                    quote: "All friendship is desirable in itself, though it starts from the need of help.",
+                    author: "Epicurus"
+                },
+                {
+                    quote: "He that has once done you a kindness will be more ready to do you another, than he whom you yourself have obliged.",
+                    author: "Ben Franklin"
+                },
+                {
+                    quote: "Hope is a perpetual state of melancholy for a future you might have where it is solely in another persons hands. Dread is the exact same concept.",
                     author: ""
                 },
                 {
-                    quote: "Do you not see the irony that your God is so powerless, where he needs you to explain to me why I must believe?",
+                    quote: "We all want what we cannot have.",
                     author: ""
                 },
                 {
-                    quote: "Es gibt keinen Gott, und es wird nie einen Gott geben, es sei denn, man betrachtet sich selbst als keinen.",
+                    quote: "My greatest fear is that I will die a philosopher.",
+                    author: ""
+                },
+                {
+                    quote: "Life is nothing but an improvisational act in which we all must deal with the reality that we may never get the chance to go on stage again.",
+                    author: ""
+                },
+                {
+                    quote: "A friend does not ask you to hold back from your dreams simply because it is more convenient for them.",
+                    author: ""
+                },
+                {
+                    quote: "The soul that sees beauty may sometimes walk alone.",
+                    author: "Johann Wolfgang von Goethe"
+                },
+                {
+                    quote: "The lonely one offers his hand too quickly to whomever he encounters.",
+                    author: "Friedrich Nietzsche"
+                },
+                {
+                    quote: "A man sees in the world what he carries in his heart.",
+                    author: "Johann Wolfgang von Goethe"
+                },
+                {
+                    quote: "You can easily judge the character of a man by how he treats those who can do nothing for him.",
+                    author: "Johann Wolfgang von Goethe"
+                },
+                {
+                    quote: "Those who know nothing of foreign languages know nothing of their own.",
+                    author: "Johann Wolfgang von Goethe"
+                },
+                {
+                    quote: "Choose well. Your choice is brief, and yet endless.",
+                    author: "Johann Wolfgang von Goethe"
+                },
+                {
+                    quote: "Too many parents make life hard for their children by trying, too zealously, to make it easy for them.",
+                    author: "Johann Wolfgang von Goethe"
+                },
+                {
+                    quote: "I have spent all my life resisting the desire to end it.",
+                    author: "Franz Kafka"
+                },
+                {
+                    quote: "If a woman is willing to bear with my personality, at least I know she's not in it JUST for the money.",
+                    author: ""
+                },
+                {
+                    quote: "You just haven't found your people.",
+                    author: ""
+                },
+                {
+                    quote: "Money is vital to the path of enlightenment. But it is only the foundation to actually achieve it. One cannot know it's true value if they've never had it.",
+                    author: ""
+                },
+                {
+                    quote: "I can love only what I can place so high above me that I cannot reach it.",
+                    author: "Franz Kafka"
+                },
+                {
+                    quote: "I have high aspirations not because they will fix my current problems, but because they'll make new problems that help me forget about the old ones.",
+                    author: ""
+                },
+                {
+                    quote: "It is better to suffer wrong than to do it, and happier to be sometimes cheated than not to trust.",
+                    author: "Samuel Johnson"
+                },
+                {
+                    quote: "If you are idle, be not solitary; if you are solitary be not idle.",
+                    author: "Samuel Johnson"
+                },
+                {
+                    quote: "If a man does not make new acquaintances as he advances through life, he will soon find himself alone. A man should keep his friendships in constant repair.",
+                    author: "Samuel Johnson "
+                },
+                {
+                    quote: "Rejection is a bittersweet experience that offers that rare glimpse into another persons reality. And without specifically saying it, they are clearly stating that both of your's do not align!",
+                    author: ""
+                },
+                {
+                    quote: "People have absurd expectations of what reality should reflect that they often perceive something outside of those boundaries as odd and therefore suspect, even if nothing has given them reason to believe so.",
+                    author: ""
+                },
+                {
+                    quote: "Love was the result of having caught a glimpse of another's loneliness.",
+                    author: "Nadeem Aslam"
+                },
+                {
+                    quote: "Sometimes it's not the people who change, it's the mask that falls off.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "Say it before you run out of time. Say it before it's too late. Say what you're feeling. Waiting is a mistake.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "Unfortunately, the clock is ticking, the hours are going by. The past increases, the future recedes. Possibilities decreasing, regrets mounting.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "If you can’t understand it without an explanation, you can’t understand it with an explanation.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: " Nobody's easier to fool, than the person who is convinced that he is right.",
+                    author: "Haruki Murakami"
+                },
+                
+                {
+                    quote: "There is nothing so cruel in this world as the desolation of having nothing to hope for. ",
+                        author: "Haruki Murakami"
+                }, 
+                {
+                    quote: "If you do anything out of the ordinary, you can be sure someone, somewhere, will get upset.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "In most cases learning something essential in life requires pain.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "In a sense, I'm the one who ruined me: I did it myself.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "To know what one can give up, to decide to give it up, and reflect on what was given up; That is something that can only be earned by not knowing if it was right in the first place.",
+                    author: ""
+                },
+                {
+                    quote: "To be vulnernable to another soul is one of lifes most terrifying endeavors.",
+                    author: ""
+                },
+                {
+                    quote: "Be careful. The snake bites.",
+                    author: ""
+                },
+                {
+                    quote: "Most people are good...until they're not.",
+                    author: ""
+                },
+                {
+                    quote: "Sometimes, all you had to do was exist in order to be someone's saviour.",
+                    author: "Keigo Higashino"
+                },
+                {
+                    quote: "All my life I just wish I could've been normal.",
+                    author: ""
+                },
+                {
+                    quote: "If you never noticed, it never happened. ",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "Living life sometimes requires taking a risk that may have the potential to ruin your life in many ways. Wasting life is being in the state of wondering what could've happened.",
+                    author: ""
+                },
+                {
+                    quote: "Learning to hope is good, but you will fail. Be sure to have thick skin before you do.",
+                    author: ""
+                },
+                {
+                    quote: "If you really want to know something, you have to be willing to pay the price.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "Taking crazy things seriously is a serious waste of time.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "What the world needs is a set villain that people can point at and say, “It's all your fault!",
+                    author: "Haruki Murakami (similar to a Jean le Rond d'Alembert quote)"
+                },
+                {
+                    quote: "Friendship's are a voluntary thing.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "Once you let yourself grow close to someone, cutting the ties could be painful.",
+                    author: "Haruki Murakami"
+                },
+                {
+                    quote: "Have hope, but not too much. Life is cruel to even good people.",
+                    author: ""
+                },
+                {
+                    quote: "So why did I do it? I could offer a million answers - all false. The truth is that I'm a bad person. But, that's gonna change - I'm going to change. This is the last of that sort of thing. Now I'm cleaning up and I'm moving on, going straight and choosing life. I'm looking forward to it already. I'm gonna be just like you. The job, the family, the fucking big television. The washing machine, the car, the compact disc and electric tin opener, good health, low cholesterol, dental insurance, mortgage, starter home, leisure wear, luggage, three piece suite, DIY, game shows, junk food, children, walks in the park, nine to five, good at golf, washing the car, choice of sweaters, family Christmas, indexed pension, tax exemption, clearing gutters, getting by, looking ahead, the day you die.",
+                    author: "Ewan McGregor from Trainspotting"
+                },
+                {
+                    quote: "Labor, not money, is what makes the world go round. The whole world could work without being paid and things would get done. The opposite cannot be said.",
+                    author: ""
+                },
+                {
+                    quote: "",
                     author: ""
                 },
             ],
