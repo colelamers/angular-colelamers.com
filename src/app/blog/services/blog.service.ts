@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BlogService {
   constructor(private http: HttpClient) { }
-    commonPath: string = "/assets/images/";
-    protected blogList: BlogInfo[] =
+  commonPath: string = "/assets/images/";
+  protected blogList: BlogInfo[] =
     [
       {
         id: 1,

@@ -22,7 +22,7 @@ export class QuoteComponent {
       }
     ];
 
-  
+
   constructor() {
     this.quoteData = [this.quotesService.quotes];
     this.GetRandomQuote();

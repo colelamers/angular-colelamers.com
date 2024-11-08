@@ -8,7 +8,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [BlogButtonComponent, CommonModule, BlogPostComponent],
+  imports: [BlogButtonComponent, CommonModule],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'
 })
