@@ -43,6 +43,13 @@ export class ButtonService {
             hrefSrcText: "https://www.youtube.com/@colelamers",
             spanText: "Youtube",
             imgSrcText: `${this.commonPath}youtube.ico`
+        },
+        {
+            include: true,
+            hasImage: true,
+            hrefSrcText: "https://www.instagram.com/colelamers",
+            spanText: "Instagram",
+            imgSrcText: `${this.commonPath}instagram.ico`
         }
     ];
     getAllButtons(): ButtonInfo[] {

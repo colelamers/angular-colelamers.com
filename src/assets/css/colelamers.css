@@ -59,12 +59,9 @@ button>img {
 
 
 /************************ Classes ************************/
-
-
 .mainContentSection {
     margin-top: 5%;
 }
-
 
 .colorPeriwinkle {
     color: #5688ff;
@@ -74,9 +71,11 @@ button>img {
     width: 100%;
 }
 
-.thirtyPercentColumn {
-    width: 30%;
-    text-align: center;
+.mediaCenterChildTag,
+.dateTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /************************ Rules ************************/
@@ -115,12 +114,10 @@ button>img {
         overflow: auto;
     }
 
-    /*
-  img[class=longImg] {
-    width: 700px;
-    height: 350px;
-  }
-  */
+    img[class=longImg] {
+        width: 700px;
+        height: 350px;
+    }
 
     img[class=squareImg] {
         width: 250px;

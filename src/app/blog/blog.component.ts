@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { BlogButtonComponent } from './blog-button/blog-button.component';
 import { BlogService } from './services/blog.service';
 import { BlogInfo } from './objects/BlogInfo';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [BlogButtonComponent, CommonModule],
+  imports: [BlogButtonComponent, CommonModule, BlogPostComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'
 })
