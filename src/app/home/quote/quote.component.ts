@@ -7,7 +7,7 @@ import { CommonModule, NgClass } from '@angular/common';
 @Component({
   selector: 'app-quote',
   standalone: true,
-  imports: [CommonModule, NgClass],
+  imports: [CommonModule],
   templateUrl: './quote.component.html',
   styleUrl: './quote.component.scss'
 })
