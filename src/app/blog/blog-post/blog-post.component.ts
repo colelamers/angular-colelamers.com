@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject, ɵ_sanitizeHtml } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router'; 
 import { BlogService } from '../services/blog.service';
 import { BlogInfo } from '../objects/BlogInfo';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -34,7 +34,7 @@ export class BlogPostComponent implements OnInit {
     });
   }
 
-  async loadBlogData() {
+  loadBlogData(){
     // This requires HttpClientModule to be imported in order for it to work
     const filePath = `../../../blogPostData/${this.blogLocation.fileName}`;
     this.http.get(filePath, { responseType: 'text' })
@@ -43,19 +43,19 @@ export class BlogPostComponent implements OnInit {
       });
   }
 
-  getDateYYMMDD() {
+  getDateYYMMDD(){
     // getDay returns the day of the week with a number
     // getDate returns the day number of the month
     let month = this.blogLocation.date.getMonth().toString();
     let day = this.blogLocation.date.getDate().toString();
 
-    if (month.length < 2) {
+    if (month.length < 2){
       month = `0${month}`;
     }
-    if (day.length < 2) {
+    if (day.length < 2){
       day = `0${day}`;
     }
-
+    
     return `${this.blogLocation.date.getFullYear()}-${month}-${day}`;
   }
 }
