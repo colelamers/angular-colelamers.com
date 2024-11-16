@@ -15,9 +15,23 @@ import { BlogInfo } from './objects/BlogInfo';
 export class BlogComponent {
   blogService: BlogService = inject(BlogService);
   blogs: BlogInfo[] = [];
-
+  isLoading: boolean = true; // Flag to show/hide loading indicator
   constructor() 
   {
-    this.blogs = this.blogService.getAllBlogs();
+    this.blogService.getAllBlogPosts().subscribe((allBlogs: BlogInfo[]) => {
+      this.blogs = allBlogs;
+    })
+  }
+
+  ngOnInit(): void {
+    this.loadBlogItems();
+  }
+
+  loadBlogItems(): void {
+    this.isLoading = true;  // Set loading to true while fetching data
+    this.blogService.getAllBlogPosts().subscribe((allBlogs: BlogInfo[]) => {
+      this.blogs = allBlogs;
+      this.isLoading = false;  // Set loading to false even on error
+    })
   }
 }

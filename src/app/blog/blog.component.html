@@ -1,4 +1,9 @@
-<div>
+<!-- Display a loading indicator while data is being fetched -->
+<div *ngIf="isLoading" class="loading-spinner">
+    <img src="../../../assets/images/loadingcat.gif" height="50" width="50" />
+</div>
+
+<div *ngIf="!isLoading">
     <app-blog-button *ngFor="let blogPost of blogs" [blogItem]="blogPost">
     </app-blog-button>
 </div>

@@ -3,5 +3,5 @@ export interface BlogInfo {
     title: string;
     fileName: string;
     //images: string[];
-    date: Date;
+    date: string;
 }
