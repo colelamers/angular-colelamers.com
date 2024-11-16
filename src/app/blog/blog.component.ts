@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { BlogButtonComponent } from './blog-button/blog-button.component';
 import { BlogService } from './services/blog.service';
 import { BlogInfo } from './objects/BlogInfo';
-import { BlogPostComponent } from './blog-post/blog-post.component';
 
 @Component({
   selector: 'app-blog',
@@ -17,7 +16,8 @@ export class BlogComponent {
   blogService: BlogService = inject(BlogService);
   blogs: BlogInfo[] = [];
 
-  constructor() {
+  constructor() 
+  {
     this.blogs = this.blogService.getAllBlogs();
   }
 }

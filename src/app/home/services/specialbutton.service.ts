@@ -1065,7 +1065,7 @@ export class SpecialButtonService {
                     author: "Haruki Murakami"
                 },
                 {
-                    quote: " Nobody's easier to fool, than the person who is convinced that he is right.",
+                    quote: "Nobody's easier to fool, than the person who is convinced that he is right.",
                     author: "Haruki Murakami"
                 },
                 
@@ -1131,7 +1131,7 @@ export class SpecialButtonService {
                 },
                 {
                     quote: "What the world needs is a set villain that people can point at and say, “It's all your fault!",
-                    author: "Haruki Murakami (similar to a Jean le Rond d'Alembert quote)"
+                    author: "Haruki Murakami (similar to a Jean le Rond d'Alembert quote of Diogenes)"
                 },
                 {
                     quote: "Friendship's are a voluntary thing.",
@@ -1151,6 +1151,26 @@ export class SpecialButtonService {
                 },
                 {
                     quote: "Labor, not money, is what makes the world go round. The whole world could work without being paid and things would get done. The opposite cannot be said.",
+                    author: ""
+                }, 
+                {
+                    quote: "Ieyasu won the Empire by retreating.",
+                    author: "Japanese proverb"
+                },
+                {
+                    quote: "The journey of a thosand miles begins with a single step. Wisdom would also dictate when you've walked 500 miles and you've realized you've gone the wrong way, that you should turn back. Achieving the wrong goal is a greater waste than not achieving the goal.",
+                    author: "Commentary on the Sunk Cost Fallacy"
+                },
+                {
+                    quote: "Just because you work hard doesn't mean it's worth anything.",
+                    author: ""
+                },
+                {
+                    quote: "Your existance does not validate your reality.",
+                    author: ""
+                },
+                {
+                    quote: "Hubris is the vengence of the humble to the proud.",
                     author: ""
                 },
                 {
