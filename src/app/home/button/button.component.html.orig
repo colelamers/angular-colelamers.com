@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+<div *ngIf="pageButtons.include" class="mediaCenterChildTag">
+  <div class="row fullDivWidth">
+    <a [href]="pageButtons.hrefSrcText">
+      <button>
+        <img *ngIf="pageButtons.hasImage" [src]="pageButtons.imgSrcText">
+        <span>
+          {{pageButtons.spanText}}
+        </span>
+      </button>
+    </a>
+  </div>
+=======
+<div *ngIf="pageButtons.include" class="mediaCenterChildTag">
+  <div class="row fullDivWidth">
+    <a [href]="pageButtons.hrefSrcText">
+      <button class="clickableButtons">
+        <img *ngIf="pageButtons.hasImage" [src]="pageButtons.imgSrcText">
+        <span>
+          {{pageButtons.spanText}}
+        </span>
+      </button>
+    </a>
+  </div>
+>>>>>>> dev.service.api
+</div>

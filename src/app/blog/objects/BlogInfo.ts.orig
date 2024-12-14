@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+export interface BlogInfo {
+    id: number
+    title: string;
+    fileName: string;
+    //images: string[];
+    date: Date;
+=======
 export interface BlogInfo {
     id: number
     title: string;
@@ -7,4 +15,5 @@ export interface BlogInfo {
     metaDate1: string;
     metaDate2: string;
     metaDate3: string;
+>>>>>>> dev.service.api
 }

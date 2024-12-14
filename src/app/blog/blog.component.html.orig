@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<div>
+    <app-blog-button *ngFor="let blogPost of blogs" [blogItem]="blogPost">
+    </app-blog-button>
+=======
 <!-- Display a loading indicator while data is being fetched -->
 <div *ngIf="isLoading" class="loading-spinner">
     <div class="loadingImage">
@@ -11,4 +16,5 @@
 <div *ngIf="!isLoading">
     <app-blog-button *ngFor="let blogPost of blogs" [blogItem]="blogPost">
     </app-blog-button>
+>>>>>>> dev.service.api
 </div>

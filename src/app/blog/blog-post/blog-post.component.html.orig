@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<p>{{blogLocation.title}}</p>
+<p>
+    <span>Date:</span>
+    <span>
+        {{this.getDateYYMMDD()}}
+    </span> 
+</p>
+<div [innerHTML]="htmlContent"></div>
+=======
 <!-- Display a loading indicator while data is being fetched -->
 <div *ngIf="isLoading" class="loading-spinner">
   <div class="loadingImage">
@@ -21,3 +31,4 @@
   </div>
   <div [innerHTML]="htmlContent"></div>
 </div>
+>>>>>>> dev.service.api
