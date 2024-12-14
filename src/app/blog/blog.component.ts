@@ -24,14 +24,17 @@ export class BlogComponent {
   }
 
   ngOnInit(): void {
+    // todo 1; get like a 2 second loading screen?
     this.loadBlogItems();
   }
 
   loadBlogItems(): void {
-    this.isLoading = true;  // Set loading to true while fetching data
+    // Set loading to true while fetching data
+    this.isLoading = true;
     this.blogService.getAllBlogPosts().subscribe((allBlogs: BlogInfo[]) => {
       this.blogs = allBlogs;
-      this.isLoading = false;  // Set loading to false even on error
+      // Set loading to false even on error
+      this.isLoading = false;
     })
   }
 }

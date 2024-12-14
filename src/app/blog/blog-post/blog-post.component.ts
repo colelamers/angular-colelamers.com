@@ -4,7 +4,6 @@ import { BlogService } from '../services/blog.service';
 import { BlogInfo } from '../objects/BlogInfo';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common'; // Import CommonModule
-import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-blog-post',
@@ -13,6 +12,7 @@ import { timer } from 'rxjs';
   templateUrl: './blog-post.component.html',
   styleUrl: './blog-post.component.scss'
 })
+// todo 1; do i need this implements OnInit?
 export class BlogPostComponent implements OnInit {
   blogId: number;
   route: ActivatedRoute = inject(ActivatedRoute);
@@ -29,24 +29,17 @@ export class BlogPostComponent implements OnInit {
   }
   
   loadBlogData(): void {
-    this.isLoading = true;  // Set loading to true while fetching data
-    this.blogService.getBlogById(this.blogId).subscribe(
-      (currentBlog: BlogInfo) => {
-        this.blogById = currentBlog;
-        const filePath = `../../../blogPostData/${this.blogById.fileName}`;
-
-        // Fetch the HTML content for the blog post
-        this.http.get(filePath, { responseType: 'text' }).subscribe((data) => {
-          this.htmlContent = data;
-          this.isLoading = false;  // Set loading to false when data is loaded
-        }, (error) => {
-          console.error('Error fetching blog content:', error);
-          this.isLoading = false;  // Set loading to false even on error
-        });
-      }, (error) => {
-        console.error('Error fetching blog post:', error);
-        this.isLoading = false;  // Set loading to false on error
-      }
+    // Set loading to true while fetching data
+    // .subscribe is basically the 'async' to convert an 
+    // Observable<Object> to and Object
+    this.isLoading = true;
+    this.blogService.getBlogById(this.blogId)
+                    .subscribe((currentBlog: BlogInfo) => {
+                      this.blogById = currentBlog;
+                      this.htmlContent = currentBlog.html;
+                      // Set loading to false on error
+                      this.isLoading = false;
+                    }
     );
   }
 

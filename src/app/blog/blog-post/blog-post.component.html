@@ -1,14 +1,23 @@
 <!-- Display a loading indicator while data is being fetched -->
 <div *ngIf="isLoading" class="loading-spinner">
-  <img src="../../../assets/images/loadingcat.gif" alt="Loading..." height="50" width="50"/>
+  <div class="loadingImage">
+    <img src="../../../assets/images/loadingcat.gif" alt="Loading..." height="50" width="50" />
+  </div>
+  <div id="idLoadingText">
+    <span>Loading</span>
+  </div>
 </div>
 
 <!-- Once data is loaded, display the actual content -->
 <div *ngIf="!isLoading">
-  <p>{{blogById.title}}</p>
-  <p>
-    <span>Date:</span>
-    <span>{{this.getDateYYMMDD()}}</span> 
-  </p>
+  <div>
+    <p>{{blogById.title}}</p>
+  </div>
+  <div>
+    <p>
+      <span>Date: </span>
+      <span>{{this.getDateYYMMDD()}}</span>
+    </p>
+  </div>
   <div [innerHTML]="htmlContent"></div>
 </div>

@@ -1,7 +1,7 @@
 <div *ngIf="pageButtons.include" class="mediaCenterChildTag">
   <div class="row fullDivWidth">
     <a [href]="pageButtons.hrefSrcText">
-      <button>
+      <button class="clickableButtons">
         <img *ngIf="pageButtons.hasImage" [src]="pageButtons.imgSrcText">
         <span>
           {{pageButtons.spanText}}
