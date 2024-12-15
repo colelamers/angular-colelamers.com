@@ -3,21 +3,22 @@ import { HomeComponent } from './home/home.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogService } from './blog/services/blog.service';
+import { ErrorComponent } from './error/error.component';
 export const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        title: "Hey it's Cole Lamers!"
+        title: "Cole Lamers"
     },
     {
         path: 'Blog',
         component: BlogComponent,
-        title: "Blog of Cole Lamers"
+        title: "Cole Lamers Blog Posts"
     },
     {
         path: 'blog',
-        component: BlogComponent,
-        title: "Blog of Cole Lamers"
+        redirectTo: "Blog",
+        pathMatch: "full"
     },
     {
         path: 'Blog/:id',
@@ -27,8 +28,12 @@ export const routes: Routes = [
     },
     {
         path: 'blog/:id',
-        component: BlogPostComponent,
-        title: "Blog of Cole Lamers",
-        data: BlogService
+        redirectTo: "Blog/:id",
+        pathMatch: "full"
+    },
+    // Catch-all route for undefined paths
+    { 
+        path: '**', 
+        component: ErrorComponent 
     }
 ];
