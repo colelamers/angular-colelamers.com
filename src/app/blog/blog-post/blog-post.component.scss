@@ -12,7 +12,7 @@
 // https: //stackoverflow.com/questions/36265026/angular-2-innerhtml-styling
 // 
 // I don't know that you need :host preceeding so I'm just going to leave it out
-::ng-deep .b {
+::ng-deep  {
     background-color: red;
 }
 
@@ -26,4 +26,8 @@
 
 ::ng-deep div .thisDiv {
     text-align: center;
+}
+
+::ng-deep .mediaSubtitle {
+    color: coral;
 }

@@ -10,13 +10,13 @@
 
 <!-- Once data is loaded, display the actual content -->
 <div *ngIf="!isLoading">
-  <div>
-    <p>{{blogById.title}}</p>
+  <div class="dateTitle">
+    <h4>{{blogById.title}}</h4>
   </div>
   <div>
-    <p>
-      <span>Date: </span>
-      <span>{{this.getDateYYMMDD()}}</span>
+    <p class="dateTitle">
+      <span>Date: &nbsp;</span>
+      <span class="mediaSubtitle">{{this.getDateYYMMDD()}}</span>
     </p>
   </div>
   <div [innerHTML]="htmlContent"></div>

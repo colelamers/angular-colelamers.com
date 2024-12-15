@@ -35,7 +35,7 @@
               "src/assets/css/normalize.css",
               "src/assets/css/skeleton.css",
               "src/assets/css/colelamers.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [
             ],
