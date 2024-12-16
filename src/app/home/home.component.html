@@ -2,6 +2,19 @@
     <app-quote></app-quote>
 </div>
 <div>
-    <app-button *ngFor="let btns of buttons" [pageButtons]="btns">
-    </app-button>
+    <div *ngFor="let btns of buttons">
+        <div *ngIf="btns.include" class="mediaCenterChildTag">
+            <div class="row fullDivWidth">
+                <a [href]="btns.hrefSrcText">
+                    <button class="clickableButtons">
+                        <img *ngIf="btns.hasImage" [src]="btns.imgSrcText">
+                        <span>
+                            {{btns.spanText}}
+                        </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+    </div>
 </div>

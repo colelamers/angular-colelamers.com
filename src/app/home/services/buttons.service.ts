@@ -6,6 +6,7 @@ import { ButtonInfo } from '../objects/buttoninfo';
 })
 export class ButtonService {
     commonPath: string = "/assets/images/";
+    // todo 1; this should be put in postgres
     protected buttonList: ButtonInfo[] =
         [
             {
@@ -57,7 +58,49 @@ export class ButtonService {
                 hrefSrcText: "https://www.threads.net/@colelamers",
                 spanText: "Threads",
                 imgSrcText: `${this.commonPath}threads.ico`
-            }
+            },
+            {
+                include: true,
+                hasImage: false,
+                hrefSrcText: "https://www.gutenberg.org/donate/",
+                spanText: "Support: Project Gutenberg",
+                imgSrcText: ``
+            },
+            {
+                include: true,
+                hasImage: false,
+                hrefSrcText: "https://ij.org/support/",
+                spanText: "Support: Institute for Justice",
+                imgSrcText: ``
+            },
+            {
+                include: true,
+                hasImage: false,
+                hrefSrcText: "https://www.fsf.org/associate",
+                spanText: "Support: Free Software Foundation",
+                imgSrcText: ``
+            },
+            {
+                include: true,
+                hasImage: false,
+                hrefSrcText: "https://www.dogsbite.org/dogsbite-donate.php",
+                spanText: "Support: Dogs Bite",
+                imgSrcText: ``
+            },
+            {
+                include: false,
+                hasImage: false,
+                hrefSrcText: "https://headlines.peta.org/donate/",
+                spanText: "Support: PETA",
+                imgSrcText: ``
+            },
+            {
+                include: false,
+                hasImage: false,
+                hrefSrcText: "https://www.nelp.org/about-us/",
+                spanText: "Support: National Employment Law Project",
+                imgSrcText: ``
+            },
         ];
     getAllButtons(): ButtonInfo[] {
         return this.buttonList;
