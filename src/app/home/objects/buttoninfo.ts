@@ -1,8 +1,8 @@
 export interface ButtonInfo {
     include: boolean;
     hasImage: boolean;
-    isSpecial?: boolean;
-
+    isSupportBtn: boolean;
+    cssClass: string;
     hrefSrcText: string;
     imgSrcText?: string;
     spanText: string;

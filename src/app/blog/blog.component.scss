@@ -1,1 +1,21 @@
 @import '../../styles.scss';
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import '../../assets/css/colelamers.css';
+
+.col-1 {
+    flex: 0 0 auto;
+    width: 70% !important;
+    margin-bottom: .5em !important;
+    margin-top: .5em !important;
+    /* Adjust for your grid settings */
+}
+
+.btnSpace {
+    margin: 1em;
+    height: 3em;
+}
+
+.col {
+    vertical-align: middle;
+    margin-top: var(--bs-gutter-y) !important;
+}

@@ -10,7 +10,7 @@ import { QuoteComponent } from './quote/quote.component';
   standalone: true,
   imports: [CommonModule, QuoteComponent],
   templateUrl: './home.component.html',
-  styles: []
+  styleUrl: './home.component.scss'
 })
 
 export class HomeComponent {

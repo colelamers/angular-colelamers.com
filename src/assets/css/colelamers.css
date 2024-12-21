@@ -10,6 +10,7 @@ header {
 
 a>button {
     overflow-wrap: break-word;
+    word-wrap: normal;
     font-size: 12px;
 }
 
@@ -21,7 +22,6 @@ button {
 
 div>span {
     display: block;
-    font-size: 11px;
 }
 
 img~img {
@@ -30,7 +30,9 @@ img~img {
 
 th,
 div>span,
-button {
+button,
+.mediaCenterChildTag,
+.dateTitle {
     text-align: center;
 }
 
@@ -43,6 +45,7 @@ th,
 h5,
 h6 {
     color: coral;
+    height: 100%;
 }
 
 /* Archive Table Buttons */
@@ -63,10 +66,6 @@ button>img {
     margin-top: 5%;
 }
 
-.colorPeriwinkle {
-    color: #5688ff;
-}
-
 .fullDivWidth {
     width: 100%;
 }
@@ -76,7 +75,7 @@ button>img {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    word-wrap: normal;
 }
 
 /************************ Rules ************************/

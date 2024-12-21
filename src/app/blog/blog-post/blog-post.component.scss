@@ -2,9 +2,9 @@
     upon refresh, the pathing for these would get lost. So I hardcoded it in 
     here to fix that.
 */
-@import '../../../../assets/css/colelamers.css';
-@import '../../../../assets/css/normalize.css';
-@import '../../../../assets/css/skeleton.css';
+@import '../../../../src/assets/css/colelamers.css';
+@import '../../../../src/assets/css/normalize.css';
+@import '../../../../src/assets/css/skeleton.css';
 @import '../../../styles.scss';
 
 // This is how you use dynamic css styling. Will potentially be deprecated soon
@@ -12,13 +12,6 @@
 // https: //stackoverflow.com/questions/36265026/angular-2-innerhtml-styling
 // 
 // I don't know that you need :host preceeding so I'm just going to leave it out
-::ng-deep  {
-    background-color: red;
-}
-
-::ng-deep .a {
-    background-color: pink;
-}
 
 ::ng-deep .ctr {
     align-items: center;
@@ -30,4 +23,8 @@
 
 ::ng-deep .mediaSubtitle {
     color: coral;
+}
+
+::ng-deep p {
+    font-size: 16px;
 }

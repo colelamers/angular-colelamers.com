@@ -12,94 +12,147 @@ export class ButtonService {
             {
                 include: true,
                 hasImage: true,
+                isSupportBtn: false,
                 hrefSrcText: "mailto:colelamers@gmail.com",
                 spanText: "Email Me",
-                imgSrcText: `${this.commonPath}bear.gif`
+                imgSrcText: `${this.commonPath}bear.gif`,
+                cssClass: ""
             },
             {
                 include: true,
                 hasImage: true,
+                isSupportBtn: false,
                 hrefSrcText: "https://www.amazon.com/Lonerism-Thriving-Modern-World-Alone/dp/B0BZF9NFQJ/",
                 spanText: "Buy My Book!",
-                imgSrcText: ``
+                imgSrcText: ``,
+                cssClass: ""
             },
             {
                 include: true,
                 hasImage: true,
+                isSupportBtn: false,
                 hrefSrcText: "https://www.linkedin.com/in/colelamers/",
                 spanText: "LinkedIn",
-                imgSrcText: `${this.commonPath}linkedin.svg`
+                imgSrcText: `${this.commonPath}linkedin.svg`,
+                cssClass: ""
             },
             {
                 include: true,
                 hasImage: true,
+                isSupportBtn: false,
                 hrefSrcText: "https://github.com/colelamers",
                 spanText: "GitHub",
-                imgSrcText: `${this.commonPath}github.ico`
+                imgSrcText: `${this.commonPath}github.ico`,
+                cssClass: ""
 
             },
             {
                 include: true,
                 hasImage: true,
-                hrefSrcText: "https://www.youtube.com/@colelamers",
-                spanText: "Youtube",
-                imgSrcText: `${this.commonPath}youtube.ico`
-            },
-            {
-                include: true,
-                hasImage: true,
+                isSupportBtn: false,
                 hrefSrcText: "https://www.instagram.com/colelamers",
                 spanText: "Instagram",
-                imgSrcText: `${this.commonPath}instagram.ico`
+                imgSrcText: `${this.commonPath}instagram.ico`,
+                cssClass: ""
             },
             {
                 include: true,
                 hasImage: true,
+                isSupportBtn: false,
                 hrefSrcText: "https://www.threads.net/@colelamers",
                 spanText: "Threads",
-                imgSrcText: `${this.commonPath}threads.ico`
+                imgSrcText: `${this.commonPath}threads.ico`,
+                cssClass: ""
             },
             {
                 include: true,
                 hasImage: false,
-                hrefSrcText: "https://www.gutenberg.org/donate/",
-                spanText: "Support: Project Gutenberg",
-                imgSrcText: ``
+                isSupportBtn: true,
+                hrefSrcText: "https://www.gutenberg.org/",
+                spanText: "Project Gutenberg",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
             },
             {
                 include: true,
                 hasImage: false,
-                hrefSrcText: "https://ij.org/support/",
-                spanText: "Support: Institute for Justice",
-                imgSrcText: ``
+                isSupportBtn: true,
+                hrefSrcText: "https://ij.org/",
+                spanText: "Institute for Justice",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
             },
             {
                 include: true,
                 hasImage: false,
-                hrefSrcText: "https://www.fsf.org/associate",
-                spanText: "Support: Free Software Foundation",
-                imgSrcText: ``
+                isSupportBtn: true,
+                hrefSrcText: "https://www.fsf.org/",
+                spanText: "Free Software Foundation",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
             },
             {
                 include: true,
                 hasImage: false,
-                hrefSrcText: "https://www.dogsbite.org/dogsbite-donate.php",
-                spanText: "Support: Dogs Bite",
-                imgSrcText: ``
+                isSupportBtn: true,
+                hrefSrcText: "https://www.dogsbite.org/",
+                spanText: "Dogs Bite",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
             },
             {
-                include: false,
+                include: true,
                 hasImage: false,
+                isSupportBtn: true,
+                hrefSrcText: "https://www.eff.org/",
+                spanText: "Electronic Frontier Foundation",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
+            },
+            {
+                include: true,
+                hasImage: false,
+                isSupportBtn: true,
                 hrefSrcText: "https://headlines.peta.org/donate/",
-                spanText: "Support: PETA",
-                imgSrcText: ``
+                spanText: "PETA",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
             },
             {
                 include: false,
                 hasImage: false,
+                isSupportBtn: true,
                 hrefSrcText: "https://www.nelp.org/about-us/",
-                spanText: "Support: National Employment Law Project",
-                imgSrcText: ``
+                spanText: "National Employment Law Project",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
+            },
+            {
+                include: true,
+                hasImage: false,
+                isSupportBtn: true,
+                hrefSrcText: "https://www.linuxmint.com/",
+                spanText: "Linux Mint",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
+            },
+            {
+                include: true,
+                hasImage: false,
+                isSupportBtn: true,
+                hrefSrcText: "https://www.gnucash.org/",
+                spanText: "GNUCash",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
+            },
+            {
+                include: true,
+                hasImage: false,
+                isSupportBtn: true,
+                hrefSrcText: "https://www.historians.org/",
+                spanText: "American Historical Association",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
             },
         ];
     getAllButtons(): ButtonInfo[] {

@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 @Component({
   selector: 'app-blog-post',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BlogPostComponent],
   templateUrl: './blog-post.component.html',
   styleUrl: './blog-post.component.scss'
 })
@@ -43,8 +43,8 @@ export class BlogPostComponent implements OnInit {
     );
   }
 
-  getDateYYMMDD()
-  {
+  getDateYYMMDD(): string {
+    // todo 1; try to figure out how to consolidate these
     // getDay returns the day of the week with a number
     // getDate returns the day number of the month
     let dateSplitString: number[] = this.blogById.date.split("-").map(n => Number.parseInt(n));
@@ -62,3 +62,4 @@ export class BlogPostComponent implements OnInit {
     return `${year}-${month}-${day}`;
   }
 }
+
