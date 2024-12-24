@@ -2,8 +2,8 @@ import { Component, OnInit, inject, ɵ_sanitizeHtml } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 import { BlogService } from '../services/blog.service';
 import { BlogInfo } from '../objects/BlogInfo';
-import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common'; // Import CommonModule
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog-post',
@@ -16,22 +16,25 @@ export class BlogPostComponent implements OnInit {
   blogId: number;
   route: ActivatedRoute = inject(ActivatedRoute);
   blogById!: BlogInfo;
-  htmlContent: string = '';
   isLoading: boolean = true; // Flag to show/hide loading indicator
+  safeHtmlContent!: SafeHtml;
 
-  constructor(private blogService: BlogService,) {
+  constructor(
+    private blogService: BlogService,
+    private sanitizer: DomSanitizer
+  ) {
     this.blogId = Number(this.route.snapshot.params['id']);
   }
-
   ngOnInit(): void {
     this.isLoading = true;
     this.blogService.getBlogById(this.blogId).subscribe(
-      (currentBlog: BlogInfo) => {
+      (currentBlog: any) => {
         this.blogById = currentBlog;
-        this.htmlContent = currentBlog.html;
-        // Set loading to false on error
+        // Sanitize and store the HTML content safely
+        this.safeHtmlContent = this.sanitizer.bypassSecurityTrustHtml(currentBlog.html);
         this.isLoading = false;
-      });
+      }
+    );
   }
   
   getDateYYMMDD(): string {
