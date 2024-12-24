@@ -11,8 +11,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'
 })
-// todo 1; add items to local storage upon first call so they don't need
-// another sql call every time
 export class BlogComponent {
   blogService: BlogService = inject(BlogService);
   blogs: BlogInfo[] = [];
@@ -25,18 +23,32 @@ export class BlogComponent {
   }
 
   ngOnInit(): void {
-    // todo 1; get like a 2 second loading screen?
-    this.loadBlogItems();
-  }
-
-  loadBlogItems(): void {
-    // Set loading to true while fetching data
+    // Display a loading screen while fetching data
     this.isLoading = true;
-    this.blogService.getAllBlogPosts().subscribe((allBlogs: BlogInfo[]) => {
-      this.blogs = allBlogs;
-      // Set loading to false even on error
-      this.isLoading = false;
-    })
+
+    // Check if blogs are already in sessionStorage
+    const cachedBlogs: string | null = sessionStorage.getItem('blogs');
+    if (cachedBlogs) {
+      // Use cached data
+      this.blogs = JSON.parse(cachedBlogs);
+      this.isLoading = false; // Loading complete
+    } else {
+      // Fetch data from the service if not in sessionStorage
+      this.blogService.getAllBlogPosts().subscribe({
+        next: (allBlogs: BlogInfo[]) => {
+          this.blogs = allBlogs;
+
+          // Store the fetched blogs in sessionStorage
+          sessionStorage.setItem('blogs', JSON.stringify(allBlogs));
+
+          this.isLoading = false; // Loading complete
+        },
+        error: (err) => {
+          console.error('Error fetching blog posts:', err);
+          this.isLoading = false; // Loading complete even on error
+        }
+      });
+    }
   }
 
   getBlogDate(date: string): string {
@@ -98,8 +110,3 @@ export class BlogComponent {
 
   }
 }
-
-// todo 1; date on right side issue still for mobile. gonna have to make it not trigger and be smaller width.
-// also text in button is not wrapping.
-
-// todo 1; also another issue is all the text is really small so that is a global issue i need to fix.

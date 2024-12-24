@@ -1,7 +1,10 @@
 <button type="button" id="timerButton" (click)="GetRandomQuote()" class="glowButton">ColeLamers.com</button>
 <div class="table">
     <div class="row">
-        <div class="cell quote">
+        <div *ngIf="isLoading" class="loadingImage">
+            <img src="../../../assets/images/loadingcat.gif" alt="Loading..." height="50" width="50" />
+        </div>
+        <div *ngIf="!isLoading" class="cell quote">
             <span>{{randomQuote.quote}}</span>
         </div>
     </div>

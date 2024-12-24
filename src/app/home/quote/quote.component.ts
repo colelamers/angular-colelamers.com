@@ -3,6 +3,7 @@ import { HomeComponent } from '../home.component';
 import { Quote } from '../objects/quote';
 import { QuoteService } from '../services/quote.service';
 import { CommonModule, NgClass } from '@angular/common';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-quote',
@@ -14,25 +15,41 @@ import { CommonModule, NgClass } from '@angular/common';
 export class QuoteComponent {
   quotesService: QuoteService = inject(QuoteService);
   randomQuote: Quote = { quote: "", author: "" };
-  quoteData!: Quote[];
+  quoteData: Quote[] = [{quote: "error", author: "error"}];
+  isLoading: boolean = true;
 
-  async ngOnInit(): Promise<void> {
-
-    // Wait for the quotes to be fetched before proceeding
-    const quotes = await this.quotesService.getAllQuotes().toPromise();
-
-    // Set the quote data once the quotes are fetched
-    if (quotes) {
-      this.quoteData = quotes;
+  ngOnInit():void {
+    // Check if quotes are already in sessionStorage
+    const cachedQuotes: string | null = sessionStorage.getItem('quotes');
+    if (cachedQuotes) {
+      // Use cached data
+      this.quoteData = JSON.parse(cachedQuotes);
+      this.isLoading = false;
+      this.GetRandomQuote();
     } else {
-      // Handle the case when quotes is undefined
-      console.error('No quotes found or error retrieving quotes.');
-      this.quoteData = []; // Optionally, set to an empty array
-    }
+      // Fetch data from the service if not in sessionStorage
+      this.quotesService.getAllQuotes().subscribe({
+        next: (quotes: Quote[]) => {
+          this.isLoading = false;
 
-    // Now call other methods
-    //this.randomQuote = this.randomizeQuote();
-    this.GetRandomQuote();
+          if (quotes && quotes.length > 0) {
+            this.quoteData = quotes;
+
+            // Store the fetched data in sessionStorage
+            sessionStorage.setItem('quotes', JSON.stringify(quotes));
+
+            this.GetRandomQuote(); // Proceed with the random quote
+          } else {
+            console.error('No quotes found.');
+          }
+        },
+        error: (err) => {
+          this.isLoading = false;
+          console.error('Error retrieving quotes:', err);
+        }
+      });
+    }
+    
   }
 
   // Makes an HTML node and appends it to the DOM with 
@@ -48,6 +65,5 @@ export class QuoteComponent {
       this.randomQuote = this.randomizeQuote();
     }
     
-    //alert('Test message :' + this.randomQuote.author + ' Count :' + this.randomQuote.quote);
   }
 }

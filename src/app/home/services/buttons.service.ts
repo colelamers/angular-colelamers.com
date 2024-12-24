@@ -145,15 +145,6 @@ export class ButtonService {
                 imgSrcText: ``,
                 cssClass: "supportBtn"
             },
-            {
-                include: true,
-                hasImage: false,
-                isSupportBtn: true,
-                hrefSrcText: "https://www.historians.org/",
-                spanText: "American Historical Association",
-                imgSrcText: ``,
-                cssClass: "supportBtn"
-            },
         ];
     getAllButtons(): ButtonInfo[] {
         return this.buttonList;

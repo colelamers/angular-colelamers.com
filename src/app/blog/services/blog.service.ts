@@ -17,29 +17,9 @@ export class BlogService {
 
   // Fetch a single blog post by ID
   getBlogById(id: number): Observable<BlogInfo> {
+    // todo 1; change this id value to be a different value in here
+    // and in SQL because we do not want this field to be changeable in case
+    // the SQL id ever changes. 
     return this.http.get<BlogInfo>(`${this.apiLocation}/${id}`);
   }
-
-  // todo 1; i want to change this so that i just need to update a json file
-  // or something everytime instead of needing to rebuild the whole app. 
-  // i want to just drag and drop my new stuff.
-  // protected blogList: BlogInfo[] =
-  //   [
-  //     {
-  //       id: 1,
-  //       title: "First Post",
-  //       fileName: "0001firstpost.html",
-  //       date: new Date(2024, 11, 8)
-  //     },
-  //   ];
-
-  // getAllBlogs(): BlogInfo[] 
-  // {
-  //   return this.blogList;
-  // }
-  // getBlogById(id: number): BlogInfo 
-  // {
-  //   return this.blogList.find((blogList) => blogList.id === id)!;
-  // }
-
 }

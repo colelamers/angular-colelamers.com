@@ -12,7 +12,6 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
   templateUrl: './blog-post.component.html',
   styleUrl: './blog-post.component.scss'
 })
-// todo 1; do i need this implements OnInit?
 export class BlogPostComponent implements OnInit {
   blogId: number;
   route: ActivatedRoute = inject(ActivatedRoute);
@@ -20,34 +19,27 @@ export class BlogPostComponent implements OnInit {
   htmlContent: string = '';
   isLoading: boolean = true; // Flag to show/hide loading indicator
 
-  constructor(private blogService: BlogService, private http: HttpClient) {
+  constructor(private blogService: BlogService,) {
     this.blogId = Number(this.route.snapshot.params['id']);
   }
 
   ngOnInit(): void {
-    this.loadBlogData();
+    this.isLoading = true;
+    this.blogService.getBlogById(this.blogId).subscribe(
+      (currentBlog: BlogInfo) => {
+        this.blogById = currentBlog;
+        this.htmlContent = currentBlog.html;
+        // Set loading to false on error
+        this.isLoading = false;
+      });
   }
   
-  loadBlogData(): void {
-    // Set loading to true while fetching data
-    // .subscribe is basically the 'async' to convert an 
-    // Observable<Object> to and Object
-    this.isLoading = true;
-    this.blogService.getBlogById(this.blogId)
-                    .subscribe((currentBlog: BlogInfo) => {
-                      this.blogById = currentBlog;
-                      this.htmlContent = currentBlog.html;
-                      // Set loading to false on error
-                      this.isLoading = false;
-                    }
-    );
-  }
-
   getDateYYMMDD(): string {
     // todo 1; try to figure out how to consolidate these
     // getDay returns the day of the week with a number
     // getDate returns the day number of the month
-    let dateSplitString: number[] = this.blogById.date.split("-").map(n => Number.parseInt(n));
+    let dateSplitString: number[] = this.blogById.date.split("-")
+                                                      .map(n => Number.parseInt(n));
     let year = dateSplitString[0].toString();
     let month = dateSplitString[1].toString();
     let day = dateSplitString[2].toString();
