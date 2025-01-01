@@ -20,6 +20,9 @@ export class BlogComponent {
     this.blogService.getAllBlogPosts().subscribe((allBlogs: BlogInfo[]) => {
       this.blogs = allBlogs;
     })
+    // todo 1; need to perform a check here to verify the session storage count
+    // with the constructor data retrieval count. if constructor > || < onINit,
+    // then put init data there
   }
 
   ngOnInit(): void {
@@ -28,6 +31,8 @@ export class BlogComponent {
 
     // Check if blogs are already in sessionStorage
     const cachedBlogs: string | null = sessionStorage.getItem('blogs');
+    
+    // Fetch blogs until data returns
     if (cachedBlogs) {
       // Use cached data
       this.blogs = JSON.parse(cachedBlogs);

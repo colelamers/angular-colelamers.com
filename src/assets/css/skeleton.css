@@ -326,9 +326,9 @@ input[type="button"] {
     display: inline-block;
     height: 38px;
     /*  padding: 0 30px; 2022-11-24 I found that this messes with buttons*/
-    color: #555;
+    color: #fff;
     text-align: center;
-    font-size: 11px;
+    /*font-size: 11px; 2024-12-19, Makes my quote button look bigger*/
     font-weight: 600;
     line-height: 38px;
     letter-spacing: .1rem;
@@ -346,19 +346,25 @@ input[type="button"] {
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover,
+input[type="button"]:hover {
+    /* ORIGINAL */
+    /* color: #333;*/
+    color: #fe0;
+    /* changed from original 2023-03-05 */
+    border-color: #fff;
+    outline: 0;
+}
+
+/* 2025-01-01, Found that removing this from the .button:hover section
+caused my button color to revert back to its original state after clicking it
 .button:focus,
 button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-    /* ORIGINAL */
-    /* color: #333;*/
-    color: #fe0;
-    /* changed from original 2023-03-05 */
-    border-color: #888;
-    outline: 0;
+
 }
+*/
 
 .button.button-primary,
 button.button-primary,

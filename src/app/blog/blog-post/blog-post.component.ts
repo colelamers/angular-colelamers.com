@@ -25,6 +25,7 @@ export class BlogPostComponent implements OnInit {
   ) {
     this.blogId = Number(this.route.snapshot.params['id']);
   }
+  
   ngOnInit(): void {
     this.isLoading = true;
     this.blogService.getBlogById(this.blogId).subscribe(

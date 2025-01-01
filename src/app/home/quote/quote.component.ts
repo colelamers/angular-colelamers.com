@@ -21,8 +21,17 @@ export class QuoteComponent {
   ngOnInit():void {
     // Check if quotes are already in sessionStorage
     const cachedQuotes: string | null = sessionStorage.getItem('quotes');
+    // todo 1; put a do while here to make sure it can pull quotes? careful with
+    // this though cause my blog post was getting trapped. i think that's cause
+    // my while check was wrong and was doing str.length === 0 to a null value
+    
+    // todo 1; to add to this previous todo, there apparently is a lagging issue
+    // that occurs which i guess causes angular to refresh because it cannot 
+    // perform this task after a while. maybe an issue with postgres or
+    // to many people hitting the server/db at the same time.
     if (cachedQuotes) {
       // Use cached data
+      console.log("fetching cache")
       this.quoteData = JSON.parse(cachedQuotes);
       this.isLoading = false;
       this.GetRandomQuote();
@@ -49,7 +58,6 @@ export class QuoteComponent {
         }
       });
     }
-    
   }
 
   // Makes an HTML node and appends it to the DOM with 

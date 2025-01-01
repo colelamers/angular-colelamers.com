@@ -11,11 +11,11 @@ export class ButtonService {
         [
             {
                 include: true,
-                hasImage: true,
+                hasImage: false,
                 isSupportBtn: false,
                 hrefSrcText: "mailto:colelamers@gmail.com",
                 spanText: "Email Me",
-                imgSrcText: `${this.commonPath}bear.gif`,
+                imgSrcText: ``,
                 cssClass: ""
             },
             {
