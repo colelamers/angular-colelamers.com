@@ -30,7 +30,7 @@ export class BlogComponent {
     this.isLoading = true;
 
     // Check if blogs are already in sessionStorage
-    const cachedBlogs: string | null = sessionStorage.getItem('blogs');
+    const cachedBlogs: string | null = window.sessionStorage.getItem('blogs');
     
     // Fetch blogs until data returns
     if (cachedBlogs) {

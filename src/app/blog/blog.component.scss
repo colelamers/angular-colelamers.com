@@ -31,3 +31,9 @@
     outline-style: inset;
     outline-width: 3px;
 }
+
+a>button:hover {
+    color: #fe0;
+    border-color: #fff;
+    outline: 0;
+}

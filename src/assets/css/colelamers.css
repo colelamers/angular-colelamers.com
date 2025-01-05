@@ -12,9 +12,6 @@ a>button {
     overflow-wrap: break-word;
     word-wrap: normal;
     font-size: 12px;
-}
-
-button {
     width: 100%;
     background-color: black;
     height: 50px;
@@ -40,6 +37,16 @@ th {
     font-size: x-large;
 }
 
+button:hover,
+input[type="button"]:hover {
+    /* ORIGINAL */
+    /* color: #333;*/
+    color: #fe0;
+    /* changed from original 2023-03-05 */
+    border-color: #fff;
+    outline: 0;
+}
+
 a>button,
 th,
 h5,
@@ -47,6 +54,8 @@ h6 {
     color: coral;
     height: 100%;
 }
+
+
 
 /* Archive Table Buttons */
 td>a>button {

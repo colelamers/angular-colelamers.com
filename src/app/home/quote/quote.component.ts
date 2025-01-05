@@ -19,6 +19,7 @@ export class QuoteComponent {
   isLoading: boolean = true;
 
   ngOnInit():void {
+    console.log("Got Session")
     // Check if quotes are already in sessionStorage
     const cachedQuotes: string | null = sessionStorage.getItem('quotes');
     // todo 1; put a do while here to make sure it can pull quotes? careful with
