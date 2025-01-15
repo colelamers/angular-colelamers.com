@@ -8,7 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, QuoteComponent],
+  imports: [CommonModule, QuoteComponent,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

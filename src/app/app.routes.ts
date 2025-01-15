@@ -23,7 +23,7 @@ export const routes: Routes = [
     {
         path: 'Blog/:id',
         component: BlogPostComponent,
-        title: "Blog of Cole Lamers",
+        title: "Just a thought of Cole Lamers",
         data: BlogService
     },
     {

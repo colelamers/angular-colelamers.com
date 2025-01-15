@@ -57,15 +57,6 @@ export class ButtonService {
             },
             {
                 include: true,
-                hasImage: true,
-                isSupportBtn: false,
-                hrefSrcText: "https://www.threads.net/@colelamers",
-                spanText: "Threads",
-                imgSrcText: `${this.commonPath}threads.ico`,
-                cssClass: ""
-            },
-            {
-                include: true,
                 hasImage: false,
                 isSupportBtn: true,
                 hrefSrcText: "https://www.gutenberg.org/",
@@ -104,33 +95,6 @@ export class ButtonService {
                 include: true,
                 hasImage: false,
                 isSupportBtn: true,
-                hrefSrcText: "https://www.eff.org/",
-                spanText: "Electronic Frontier Foundation",
-                imgSrcText: ``,
-                cssClass: "supportBtn"
-            },
-            {
-                include: true,
-                hasImage: false,
-                isSupportBtn: true,
-                hrefSrcText: "https://headlines.peta.org/donate/",
-                spanText: "PETA",
-                imgSrcText: ``,
-                cssClass: "supportBtn"
-            },
-            {
-                include: false,
-                hasImage: false,
-                isSupportBtn: true,
-                hrefSrcText: "https://www.nelp.org/about-us/",
-                spanText: "National Employment Law Project",
-                imgSrcText: ``,
-                cssClass: "supportBtn"
-            },
-            {
-                include: true,
-                hasImage: false,
-                isSupportBtn: true,
                 hrefSrcText: "https://www.linuxmint.com/",
                 spanText: "Linux Mint",
                 imgSrcText: ``,
@@ -142,6 +106,15 @@ export class ButtonService {
                 isSupportBtn: true,
                 hrefSrcText: "https://www.gnucash.org/",
                 spanText: "GNUCash",
+                imgSrcText: ``,
+                cssClass: "supportBtn"
+            },
+            {
+                include: true,
+                hasImage: false,
+                isSupportBtn: true,
+                hrefSrcText: "https://deathwithdignity.org/",
+                spanText: "Death With Dignity",
                 imgSrcText: ``,
                 cssClass: "supportBtn"
             },

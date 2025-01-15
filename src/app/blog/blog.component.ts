@@ -15,14 +15,12 @@ export class BlogComponent {
   blogService: BlogService = inject(BlogService);
   blogs: BlogInfo[] = [];
   isLoading: boolean = true; // Flag to show/hide loading indicator
+  private allBlogs!: BlogInfo | null;
   constructor() 
   {
     this.blogService.getAllBlogPosts().subscribe((allBlogs: BlogInfo[]) => {
-      this.blogs = allBlogs;
-    })
-    // todo 1; need to perform a check here to verify the session storage count
-    // with the constructor data retrieval count. if constructor > || < onINit,
-    // then put init data there
+        this.blogs = allBlogs;
+      })
   }
 
   ngOnInit(): void {

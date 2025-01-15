@@ -1,11 +1,40 @@
 <main>
-  <app-header></app-header>
+  <header>
+    <!--
+      <div>
+          <a>
+              <img src="../../assets/images/favicon.png">
+          </a>
+      </div>
+      -->
+    <!--Menu-->
+    <div class="btnHeader">
+      <a [routerLink]="['/']">
+        <button>
+          Home
+        </button>
+      </a>
+    </div>
+    <div class="btnHeader">
+      <a [routerLink]="['/Blog']">
+        <button>
+          Blog
+        </button>
+      </a>
+    </div>
+  </header>
   <section class="content">
       <div class="container">
         <div class="mainContentSection">
           <router-outlet></router-outlet>
         </div>
+        <div class="table">
+          <div class="row">
+            <div class="cell footer">
+              <span>&#169; 1994-20XX - ColeLamers.com - All Rights Reserved - Opinions expressed are solely my own </span>
+            </div>
+          </div>
+        </div>
       </div>
   </section>
-  <app-footer></app-footer>
 </main>
