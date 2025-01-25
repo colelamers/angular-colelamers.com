@@ -15,25 +15,28 @@ import { Subscription } from 'rxjs';
 export class QuoteComponent {
   quotesService: QuoteService = inject(QuoteService);
   randomQuote: Quote = { quote: "", author: "" };
-  quoteData: Quote[] = [{quote: "error", author: "error"}];
+  quoteData: Quote[] = [{ quote: "error: please refresh page", author: "error: please refresh page"}];
   isLoading: boolean = true;
+  private cachedQuotes!: string | null;
+  constructor(){ }
 
   ngOnInit():void {
+    console.log("Initializing component...");
+    try {
+      console.log("try...");
+      this.cachedQuotes = window.sessionStorage.getItem('quotes');
+    } catch (error) {
+      console.log("catch...");
+      console.error('Error accessing sessionStorage:', error);
+      this.cachedQuotes = null; // Default to no cached data
+    }
+
     console.log("Got Session")
     // Check if quotes are already in sessionStorage
-    const cachedQuotes: string | null = sessionStorage.getItem('quotes');
-    // todo 1; put a do while here to make sure it can pull quotes? careful with
-    // this though cause my blog post was getting trapped. i think that's cause
-    // my while check was wrong and was doing str.length === 0 to a null value
-    
-    // todo 1; to add to this previous todo, there apparently is a lagging issue
-    // that occurs which i guess causes angular to refresh because it cannot 
-    // perform this task after a while. maybe an issue with postgres or
-    // to many people hitting the server/db at the same time.
-    if (cachedQuotes) {
+    if (this.cachedQuotes) {
       // Use cached data
-      console.log("fetching cache")
-      this.quoteData = JSON.parse(cachedQuotes);
+      console.log("Fetching cache")
+      this.quoteData = JSON.parse(this.cachedQuotes);
       this.isLoading = false;
       this.GetRandomQuote();
     } else {

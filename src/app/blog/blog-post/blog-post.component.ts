@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, ɵ_sanitizeHtml } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 import { BlogService } from '../services/blog.service';
 import { BlogInfo } from '../objects/BlogInfo';
@@ -8,7 +8,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'app-blog-post',
   standalone: true,
-  imports: [CommonModule, BlogPostComponent],
+  imports: [CommonModule],
   templateUrl: './blog-post.component.html',
   styleUrl: './blog-post.component.scss'
 })

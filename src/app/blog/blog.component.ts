@@ -18,17 +18,16 @@ export class BlogComponent {
   constructor() 
   {
     this.blogService.getAllBlogPosts().subscribe((allBlogs: BlogInfo[]) => {
-      this.blogs = allBlogs;
-    })
-    // todo 1; need to perform a check here to verify the session storage count
-    // with the constructor data retrieval count. if constructor > || < onINit,
-    // then put init data there
+        this.blogs = allBlogs;
+      })
   }
 
   ngOnInit(): void {
     // Display a loading screen while fetching data
     this.isLoading = true;
 
+    // todo 1; there is an issue with session storage where it hangs
+    // and i cannot figure out how to fix it. probably need to revise storage now
     // Check if blogs are already in sessionStorage
     const cachedBlogs: string | null = window.sessionStorage.getItem('blogs');
     

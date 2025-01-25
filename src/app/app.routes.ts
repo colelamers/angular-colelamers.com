@@ -13,7 +13,7 @@ export const routes: Routes = [
     {
         path: 'Blog',
         component: BlogComponent,
-        title: "Cole Lamers Blog Posts"
+        title: "Cole Lamers' Blog"
     },
     {
         path: 'blog',
@@ -23,7 +23,7 @@ export const routes: Routes = [
     {
         path: 'Blog/:id',
         component: BlogPostComponent,
-        title: "Blog of Cole Lamers",
+        title: "Just a thought from Cole Lamers",
         data: BlogService
     },
     {

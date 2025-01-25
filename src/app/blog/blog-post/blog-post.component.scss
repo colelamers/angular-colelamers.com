@@ -34,3 +34,23 @@
     font-style: italic;
     color: firebrick;
 }
+
+::ng-deep pre {
+    background-color: #1c0005;
+    border: 1px solid #999;
+    border-radius: 3px;
+    display: block;
+    margin: 0 0 0 30px;
+    color: #ff0048;
+    padding: 5%;
+}
+
+::ng-deep code {
+    color: #252422;
+    font-size: 14px;
+    font-family: Consolas;
+}
+
+::ng-deep .preWrap {
+    white-space: pre-wrap;
+}
