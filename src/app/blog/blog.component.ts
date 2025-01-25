@@ -15,7 +15,6 @@ export class BlogComponent {
   blogService: BlogService = inject(BlogService);
   blogs: BlogInfo[] = [];
   isLoading: boolean = true; // Flag to show/hide loading indicator
-  private allBlogs!: BlogInfo | null;
   constructor() 
   {
     this.blogService.getAllBlogPosts().subscribe((allBlogs: BlogInfo[]) => {
@@ -27,6 +26,8 @@ export class BlogComponent {
     // Display a loading screen while fetching data
     this.isLoading = true;
 
+    // todo 1; there is an issue with session storage where it hangs
+    // and i cannot figure out how to fix it. probably need to revise storage now
     // Check if blogs are already in sessionStorage
     const cachedBlogs: string | null = window.sessionStorage.getItem('blogs');
     

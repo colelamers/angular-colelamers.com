@@ -15,14 +15,22 @@ import { Subscription } from 'rxjs';
 export class QuoteComponent {
   quotesService: QuoteService = inject(QuoteService);
   randomQuote: Quote = { quote: "", author: "" };
-  quoteData: Quote[] = [{quote: "error", author: "error"}];
+  quoteData: Quote[] = [{ quote: "error: please refresh page", author: "error: please refresh page"}];
   isLoading: boolean = true;
   private cachedQuotes!: string | null;
-  constructor(){
-    this.cachedQuotes = sessionStorage.getItem('quotes');
-  }
+  constructor(){ }
 
   ngOnInit():void {
+    console.log("Initializing component...");
+    try {
+      console.log("try...");
+      this.cachedQuotes = window.sessionStorage.getItem('quotes');
+    } catch (error) {
+      console.log("catch...");
+      console.error('Error accessing sessionStorage:', error);
+      this.cachedQuotes = null; // Default to no cached data
+    }
+
     console.log("Got Session")
     // Check if quotes are already in sessionStorage
     if (this.cachedQuotes) {
