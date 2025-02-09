@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
 })
 export class BlogService {
   constructor(private http: HttpClient) { }
-  commonPath: string = "/assets/images/";
   apiLocation: string = "/api/blogs";
   // Fetch all blog posts
   getAllBlogPosts(): Observable<BlogInfo[]> {
@@ -24,5 +23,9 @@ export class BlogService {
     // and in SQL because we do not want this field to be changeable in case
     // the SQL id ever changes. i want an id, but not the sql id.
     return this.http.get<BlogInfo>(`${this.apiLocation}/${id}`);
+  }
+
+  getBlogTitles(): Observable<BlogInfo[]> {
+    return this.http.get<BlogInfo[]>(`${this.apiLocation}/titles`);
   }
 }
