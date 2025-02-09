@@ -29,7 +29,7 @@ export class BlogComponent {
     // todo 1; there is an issue with session storage where it hangs
     // and i cannot figure out how to fix it. probably need to revise storage now
     // Check if blogs are already in sessionStorage
-    const cachedBlogs: string | null = window.sessionStorage.getItem('blogs');
+    let cachedBlogs: string | null = window.sessionStorage.getItem('blogs');
     
     // Fetch blogs until data returns
     if (cachedBlogs) {
