@@ -17,26 +17,18 @@ export class QuoteComponent {
   randomQuote: Quote = { quote: "", author: "" };
   quoteData: Quote[] = [{ quote: "error: please refresh page", author: "error: please refresh page"}];
   isLoading: boolean = true;
-  private cachedQuotes!: string | null;
   constructor(){ }
 
   ngOnInit():void {
     console.log("Initializing component...");
-    try {
-      console.log("try...");
-      this.cachedQuotes = window.sessionStorage.getItem('quotes');
-    } catch (error) {
-      console.log("catch...");
-      console.error('Error accessing sessionStorage:', error);
-      this.cachedQuotes = null; // Default to no cached data
-    }
+    let cachedQuotes = window.sessionStorage.getItem('quotes');
 
     console.log("Got Session")
     // Check if quotes are already in sessionStorage
-    if (this.cachedQuotes) {
+    if (cachedQuotes) {
       // Use cached data
       console.log("Fetching cache")
-      this.quoteData = JSON.parse(this.cachedQuotes);
+      this.quoteData = JSON.parse(cachedQuotes);
       this.isLoading = false;
       this.GetRandomQuote();
     } else {
@@ -76,6 +68,5 @@ export class QuoteComponent {
     if (this.randomQuote){
       this.randomQuote = this.randomizeQuote();
     }
-    
   }
 }

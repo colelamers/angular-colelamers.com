@@ -14,22 +14,13 @@
             My reality, in treatise form
         </span>
     </div>
-    <div *ngFor="let blogPost of blogs" class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-1 btnSpace">
-                <a [routerLink]="['/Blog', blogPost.id]">
-                    <button>
-                        <span>
-                            {{blogPost.title}}
-                        </span>
-                    </button>
-                </a>
-            </div>
-            <div class="col">
+    <div *ngFor="let blogPost of blogs" class="container-fluid align-items-center btnSpace">
+        <a [routerLink]="['/Blog', blogPost.id]">
+            <button>
                 <span>
-                    {{this.getBlogDate(blogPost.date)}}
+                    {{blogPost.title}}
                 </span>
-            </div>
-        </div>
+            </button>
+        </a>
     </div>
 </div>
